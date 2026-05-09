@@ -293,13 +293,23 @@ function PortfolioPage() {
 
         <Section id="resume" title="Resume">
           <p className="mb-5 text-lg">View or download my professional resume below.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="#" className="inline-block px-7 py-3 rounded-full bg-primary text-primary-foreground font-bold transition hover:scale-105">
+          <div className="flex flex-wrap gap-3 mb-6">
+            <a href="/Pradeep-M-Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block px-7 py-3 rounded-full bg-primary text-primary-foreground font-bold transition hover:scale-105">
               View Resume
             </a>
-            <a href="#" download className="inline-block px-7 py-3 rounded-full border-2 border-primary text-primary font-bold transition hover:bg-primary hover:text-primary-foreground">
+            <a href="/Pradeep-M-Resume.pdf" download="Pradeep-M-Resume.pdf" className="inline-block px-7 py-3 rounded-full border-2 border-primary text-primary font-bold transition hover:bg-primary hover:text-primary-foreground">
               Download Resume
             </a>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card bg-muted">
+            <object data="/Pradeep-M-Resume.pdf" type="application/pdf" className="w-full h-[80vh]">
+              <p className="p-6">
+                Your browser can't preview PDFs.{" "}
+                <a href="/Pradeep-M-Resume.pdf" className="text-primary font-semibold underline" target="_blank" rel="noopener noreferrer">
+                  Click here to open the resume
+                </a>.
+              </p>
+            </object>
           </div>
         </Section>
 
