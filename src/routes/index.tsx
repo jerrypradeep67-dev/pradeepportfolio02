@@ -306,8 +306,9 @@ function PortfolioPage() {
         <Section id="contact" title="Contact Me">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-3">
-              <p><span className="font-bold">Email:</span> pradeepmuniyandi2002@gmail.com</p>
+              <p><span className="font-bold">Email:</span> jerrypradeep67@gmail.com</p>
               <p><span className="font-bold">Phone:</span> +91 6379475645</p>
+              <p><span className="font-bold">Location:</span> Aanaiyur, Manapparai, Trichy, Tamil Nadu — 621307</p>
               <div className="flex gap-4 pt-3">
                 <a href="#" className="font-bold text-primary hover:underline">LinkedIn</a>
                 <a href="#" className="font-bold text-primary hover:underline">GitHub</a>
