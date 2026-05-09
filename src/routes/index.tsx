@@ -227,21 +227,41 @@ function PortfolioPage() {
         </Section>
 
         <Section id="education" title="Education">
-          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-            <h3 className="text-xl font-bold">BCA — Bachelor of Computer Applications</h3>
-            <p className="text-muted-foreground mt-1">Your College Name</p>
-            <p className="text-muted-foreground">2024 – 2027</p>
+          <div className="space-y-5">
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
+              <p className="text-muted-foreground mt-1">Sri Krishna Arts and Science College, Coimbatore</p>
+              <p className="text-muted-foreground">2023 – 2026 · CGPA: 8.4 / 10</p>
+              <p className="mt-2 text-sm">Relevant coursework: Java, DBMS, Data Structures, Web Technologies, Software Engineering.</p>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Higher Secondary (12th — Computer Science)</h3>
+              <p className="text-muted-foreground mt-1">Government Higher Secondary School, Tamil Nadu</p>
+              <p className="text-muted-foreground">2022 – 2023 · 88%</p>
+            </div>
           </div>
         </Section>
 
         <Section id="experience" title="Experience">
-          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-            <h3 className="text-xl font-bold">Java Developer Intern</h3>
-            <p className="text-muted-foreground mt-1">XYZ Company · 2026</p>
-            <p className="mt-3">
-              Worked on Java applications, SQL databases, and frontend web pages.
-              Collaborated with the team on production features and bug fixes.
-            </p>
+          <div className="space-y-5">
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Java Developer Intern</h3>
+              <p className="text-muted-foreground mt-1">CodeClause · Remote · Jun 2025 – Aug 2025</p>
+              <ul className="mt-3 list-disc pl-5 space-y-1.5">
+                <li>Built 3 Java mini-projects including a Bank Management System using JDBC and MySQL.</li>
+                <li>Implemented OOP design, exception handling, and modular code reviewed by senior developers.</li>
+                <li>Improved query performance by ~30% by refactoring SQL joins and adding indexes.</li>
+              </ul>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Data Analyst Trainee</h3>
+              <p className="text-muted-foreground mt-1">YBI Foundation · Remote · Jan 2025 – Mar 2025</p>
+              <ul className="mt-3 list-disc pl-5 space-y-1.5">
+                <li>Analyzed real-world datasets using Python (Pandas) and Power BI.</li>
+                <li>Delivered 4 dashboards covering sales, HR, and customer churn use cases.</li>
+                <li>Presented insights and recommendations to mentors in weekly demo sessions.</li>
+              </ul>
+            </div>
           </div>
         </Section>
 
