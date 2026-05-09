@@ -4,12 +4,12 @@ import { useEffect, useState, type FormEvent } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pradeep M | Java Developer & Data Analyst Portfolio" },
-      { name: "description", content: "Portfolio of Pradeep M — Java Developer, Data Analyst, and Web Developer. Projects, skills, certificates and contact." },
-      { name: "keywords", content: "Pradeep M, Java Developer, Data Analyst, Portfolio, HTML CSS JavaScript, Power BI" },
+      { title: "Pradeep M | Cyber Security Student & Python Developer" },
+      { name: "description", content: "Portfolio of Pradeep M — B.Tech Cyber Security student passionate about penetration testing, network security, and Python development." },
+      { name: "keywords", content: "Pradeep M, Cyber Security, Penetration Testing, Python Developer, Java, Networking, Portfolio" },
       { name: "author", content: "Pradeep M" },
-      { property: "og:title", content: "Pradeep M | Portfolio" },
-      { property: "og:description", content: "Java Developer & Data Analyst Portfolio" },
+      { property: "og:title", content: "Pradeep M | Cyber Security Portfolio" },
+      { property: "og:description", content: "Cyber Security student & Python developer portfolio" },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -17,10 +17,10 @@ export const Route = createFileRoute("/")({
 });
 
 const ROLES = [
-  "Java Developer",
-  "Data Analyst",
-  "Web Developer",
-  "Problem Solver",
+  "Cyber Security Student",
+  "Python Developer",
+  "Penetration Testing Enthusiast",
+  "Lifelong Learner",
 ];
 
 const NAV = [
@@ -36,41 +36,37 @@ const NAV = [
 ] as const;
 
 const SKILLS = [
-  { name: "Java (Core & OOP)", level: 85 },
-  { name: "SQL & MySQL", level: 80 },
-  { name: "HTML5 & CSS3", level: 90 },
-  { name: "JavaScript", level: 75 },
-  { name: "Power BI & Excel", level: 80 },
-  { name: "Python (Basics)", level: 65 },
-  { name: "Data Structures & Algorithms", level: 70 },
-  { name: "Git & GitHub", level: 75 },
+  { name: "Java", level: 75 },
+  { name: "C++", level: 70 },
+  { name: "Python", level: 80 },
+  { name: "Networking", level: 75 },
+  { name: "Web Development (Basics)", level: 65 },
+  { name: "Leadership", level: 80 },
+];
+
+const INTERESTS = [
+  "Penetration Testing",
+  "Digital Forensics",
+  "Network Security",
+  "Web Application Security",
+  "Web Design",
 ];
 
 const PROJECTS = [
   {
     title: "Student Management System",
-    desc: "Java + JDBC application to manage student records, marks, and attendance with role-based login. Built with OOP principles and MySQL backend; supports CRUD operations and report exports.",
-    tags: ["Java", "JDBC", "MySQL", "OOP"],
+    desc: "Python program to store and manage student records — supports add, update, and delete operations with structured, database-like storage. Demonstrates file handling and SQLite fundamentals.",
+    tags: ["Python", "SQLite", "File Handling", "VS Code"],
   },
   {
-    title: "Sales Insights Dashboard",
-    desc: "End-to-end Power BI dashboard analyzing 50K+ sales records. Performed data cleaning in SQL, built KPI cards, drill-through reports, and revenue trend analysis that surfaced top-performing regions.",
-    tags: ["Power BI", "SQL", "DAX", "Excel"],
+    title: "URL Status Checker",
+    desc: "Python tool that sends HTTP requests to verify whether websites are active and returns their response codes. Useful for monitoring website availability and learning networking concepts.",
+    tags: ["Python", "Requests", "Networking"],
   },
   {
-    title: "Library Management System",
-    desc: "Console-based Java app for issuing, returning, and tracking books with fine calculation. Uses file I/O for persistence and exception handling for robust user input.",
-    tags: ["Java", "File I/O", "OOP"],
-  },
-  {
-    title: "Personal Portfolio Website",
-    desc: "Fully responsive portfolio built with modern HTML, CSS, and JavaScript. Includes dark mode, typing animation, smooth scroll navigation, and mobile-first design.",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "COVID-19 Data Analysis",
-    desc: "Exploratory data analysis on global COVID-19 datasets using Excel and Power BI. Created interactive visuals comparing case growth, recovery, and vaccination trends across countries.",
-    tags: ["Excel", "Power BI", "Data Analysis"],
+    title: "Port Scanner",
+    desc: "Simple Python port scanner that probes a target system for open ports to help identify potential network vulnerabilities. Built using the socket library.",
+    tags: ["Python", "Socket", "Cyber Security"],
   },
 ];
 
@@ -121,7 +117,7 @@ function PortfolioPage() {
     const message = String(data.get("message") || "");
     const subject = encodeURIComponent(`Portfolio contact from ${name}`);
     const body = encodeURIComponent(`${message}\n\nFrom: ${name} <${email}>`);
-    window.location.href = `mailto:pradeepmuniyandi2002@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:jerrypradeep67@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -164,25 +160,27 @@ function PortfolioPage() {
       <main className="space-y-9 py-9">
         <Section id="about" title="About Me">
           <p className="text-lg leading-relaxed">
-            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a BCA student
-            passionate about turning ideas into clean, working software. I specialize in
-            <span className="font-semibold"> Java development</span> and
-            <span className="font-semibold"> data analytics</span>, and I love the moment a messy
-            dataset becomes a clear story or a few lines of code start solving a real problem.
+            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a
+            <span className="font-semibold"> B.Tech Cyber Security</span> student based in
+            Trichy, Tamil Nadu. I believe every challenge is an opportunity to grow and every
+            setback is a lesson for improvement.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Over the past two years I've built console and database-driven Java applications,
-            designed Power BI dashboards on real-world datasets, and shipped responsive websites
-            using HTML, CSS, and JavaScript. I'm currently sharpening my skills in
-            Data Structures & Algorithms, SQL, and full-stack development to grow into a
-            versatile software engineer.
+            I'm passionate, resilient, and committed to continuous learning — I enjoy exploring
+            new ideas, pushing boundaries, and building skills that create meaningful impact.
+            My goal is to keep evolving while contributing positively to the world around me,
+            with a focus on penetration testing, network security, and digital forensics.
           </p>
-          <ul className="mt-5 grid sm:grid-cols-2 gap-2 text-base">
-            <li>🎯 5+ personal projects shipped</li>
-            <li>📊 50K+ rows analyzed in Power BI</li>
-            <li>💻 Comfortable with Java, SQL & JS</li>
-            <li>🚀 Always learning something new</li>
-          </ul>
+          <div className="mt-6">
+            <h3 className="font-bold mb-3">Areas of Interest</h3>
+            <div className="flex flex-wrap gap-2">
+              {INTERESTS.map((i) => (
+                <span key={i} className="text-sm font-semibold px-3 py-1.5 rounded-full bg-primary/10 text-primary">
+                  {i}
+                </span>
+              ))}
+            </div>
+          </div>
         </Section>
 
         <Section id="skills" title="Skills">
@@ -201,6 +199,16 @@ function PortfolioPage() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-bold mb-2">Languages</h3>
+              <p className="text-muted-foreground">Tamil · English</p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2">Hobbies</h3>
+              <p className="text-muted-foreground">Watching movies · Mobile gaming · Farming</p>
+            </div>
           </div>
         </Section>
 
@@ -229,39 +237,35 @@ function PortfolioPage() {
         <Section id="education" title="Education">
           <div className="space-y-5">
             <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
-              <p className="text-muted-foreground mt-1">Sri Krishna Arts and Science College, Coimbatore</p>
-              <p className="text-muted-foreground">2023 – 2026 · CGPA: 8.4 / 10</p>
-              <p className="mt-2 text-sm">Relevant coursework: Java, DBMS, Data Structures, Web Technologies, Software Engineering.</p>
+              <h3 className="text-xl font-bold">B.Tech — Cyber Security</h3>
+              <p className="text-muted-foreground mt-1">Dhanalakshmi Srinivasan Engineering College</p>
+              <p className="text-muted-foreground">2024 – 2027 · CGPA: 7.5</p>
             </div>
             <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Higher Secondary (12th — Computer Science)</h3>
-              <p className="text-muted-foreground mt-1">Government Higher Secondary School, Tamil Nadu</p>
-              <p className="text-muted-foreground">2022 – 2023 · 88%</p>
+              <h3 className="text-xl font-bold">Diploma</h3>
+              <p className="text-muted-foreground mt-1">Dhanalakshmi Srinivasan Polytechnic College</p>
+              <p className="text-muted-foreground">2021 – 2024 · 72%</p>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">SSLC</h3>
+              <p className="text-muted-foreground mt-1">Sowma Public School</p>
+              <p className="text-muted-foreground">2017 – 2018 · 45%</p>
             </div>
           </div>
         </Section>
 
         <Section id="experience" title="Experience">
-          <div className="space-y-5">
-            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Java Developer Intern</h3>
-              <p className="text-muted-foreground mt-1">CodeClause · Remote · Jun 2025 – Aug 2025</p>
-              <ul className="mt-3 list-disc pl-5 space-y-1.5">
-                <li>Built 3 Java mini-projects including a Bank Management System using JDBC and MySQL.</li>
-                <li>Implemented OOP design, exception handling, and modular code reviewed by senior developers.</li>
-                <li>Improved query performance by ~30% by refactoring SQL joins and adding indexes.</li>
-              </ul>
-            </div>
-            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Data Analyst Trainee</h3>
-              <p className="text-muted-foreground mt-1">YBI Foundation · Remote · Jan 2025 – Mar 2025</p>
-              <ul className="mt-3 list-disc pl-5 space-y-1.5">
-                <li>Analyzed real-world datasets using Python (Pandas) and Power BI.</li>
-                <li>Delivered 4 dashboards covering sales, HR, and customer churn use cases.</li>
-                <li>Presented insights and recommendations to mentors in weekly demo sessions.</li>
-              </ul>
-            </div>
+          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+            <h3 className="text-xl font-bold">Open to Internships</h3>
+            <p className="text-muted-foreground mt-1">Cyber Security · Penetration Testing · Python Development</p>
+            <p className="mt-3">
+              Currently pursuing my B.Tech in Cyber Security and actively seeking internship
+              opportunities where I can apply my Python, networking, and security fundamentals
+              on real-world projects. Outside of coursework, I build personal projects (see
+              the <a href="#projects" className="text-primary font-semibold hover:underline">Projects</a> section)
+              to strengthen my hands-on skills in scripting, network reconnaissance, and
+              vulnerability discovery.
+            </p>
           </div>
         </Section>
 
@@ -302,8 +306,9 @@ function PortfolioPage() {
         <Section id="contact" title="Contact Me">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-3">
-              <p><span className="font-bold">Email:</span> pradeepmuniyandi2002@gmail.com</p>
+              <p><span className="font-bold">Email:</span> jerrypradeep67@gmail.com</p>
               <p><span className="font-bold">Phone:</span> +91 6379475645</p>
+              <p><span className="font-bold">Location:</span> Aanaiyur, Manapparai, Trichy, Tamil Nadu — 621307</p>
               <div className="flex gap-4 pt-3">
                 <a href="#" className="font-bold text-primary hover:underline">LinkedIn</a>
                 <a href="#" className="font-bold text-primary hover:underline">GitHub</a>
