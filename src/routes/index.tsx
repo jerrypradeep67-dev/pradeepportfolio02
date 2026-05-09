@@ -36,34 +36,50 @@ const NAV = [
 ] as const;
 
 const SKILLS = [
-  { name: "Java", level: 85 },
-  { name: "HTML & CSS", level: 90 },
+  { name: "Java (Core & OOP)", level: 85 },
+  { name: "SQL & MySQL", level: 80 },
+  { name: "HTML5 & CSS3", level: 90 },
   { name: "JavaScript", level: 75 },
-  { name: "Power BI", level: 70 },
-  { name: "SQL", level: 80 },
+  { name: "Power BI & Excel", level: 80 },
+  { name: "Python (Basics)", level: 65 },
+  { name: "Data Structures & Algorithms", level: 70 },
+  { name: "Git & GitHub", level: 75 },
 ];
 
 const PROJECTS = [
   {
     title: "Student Management System",
-    desc: "Java project for managing student records, marks and attendance with a clean console interface.",
-    tags: ["Java", "OOP", "JDBC"],
+    desc: "Java + JDBC application to manage student records, marks, and attendance with role-based login. Built with OOP principles and MySQL backend; supports CRUD operations and report exports.",
+    tags: ["Java", "JDBC", "MySQL", "OOP"],
   },
   {
-    title: "Sales Data Analysis",
-    desc: "Business insights dashboard built with Excel, SQL and Power BI on real sales data.",
-    tags: ["Power BI", "SQL", "Excel"],
+    title: "Sales Insights Dashboard",
+    desc: "End-to-end Power BI dashboard analyzing 50K+ sales records. Performed data cleaning in SQL, built KPI cards, drill-through reports, and revenue trend analysis that surfaced top-performing regions.",
+    tags: ["Power BI", "SQL", "DAX", "Excel"],
   },
   {
-    title: "Portfolio Website",
-    desc: "Responsive personal portfolio built with modern HTML, CSS and JavaScript.",
-    tags: ["HTML", "CSS", "JS"],
+    title: "Library Management System",
+    desc: "Console-based Java app for issuing, returning, and tracking books with fine calculation. Uses file I/O for persistence and exception handling for robust user input.",
+    tags: ["Java", "File I/O", "OOP"],
+  },
+  {
+    title: "Personal Portfolio Website",
+    desc: "Fully responsive portfolio built with modern HTML, CSS, and JavaScript. Includes dark mode, typing animation, smooth scroll navigation, and mobile-first design.",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "COVID-19 Data Analysis",
+    desc: "Exploratory data analysis on global COVID-19 datasets using Excel and Power BI. Created interactive visuals comparing case growth, recovery, and vaccination trends across countries.",
+    tags: ["Excel", "Power BI", "Data Analysis"],
   },
 ];
 
 const CERTIFICATES = [
-  { title: "Java Programming", issuer: "Completed Java programming training." },
-  { title: "Data Analysis", issuer: "Excel, SQL and Power BI fundamentals." },
+  { title: "Java Programming Masterclass", issuer: "Udemy · 2025" },
+  { title: "SQL for Data Analysis", issuer: "HackerRank · 2025" },
+  { title: "Microsoft Power BI Data Analyst", issuer: "Microsoft Learn · 2025" },
+  { title: "Responsive Web Design", issuer: "freeCodeCamp · 2024" },
+  { title: "Python for Everybody", issuer: "Coursera · 2024" },
 ];
 
 const ACHIEVEMENTS = [
@@ -147,11 +163,26 @@ function PortfolioPage() {
 
       <main className="space-y-9 py-9">
         <Section id="about" title="About Me">
-          <p className="text-lg">
-            I am a motivated student and beginner developer interested in Java development,
-            data analysis, and web development. I enjoy solving problems, learning new
-            technologies, and building real-world projects that create impact.
+          <p className="text-lg leading-relaxed">
+            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a BCA student
+            passionate about turning ideas into clean, working software. I specialize in
+            <span className="font-semibold"> Java development</span> and
+            <span className="font-semibold"> data analytics</span>, and I love the moment a messy
+            dataset becomes a clear story or a few lines of code start solving a real problem.
           </p>
+          <p className="text-lg leading-relaxed mt-4">
+            Over the past two years I've built console and database-driven Java applications,
+            designed Power BI dashboards on real-world datasets, and shipped responsive websites
+            using HTML, CSS, and JavaScript. I'm currently sharpening my skills in
+            Data Structures & Algorithms, SQL, and full-stack development to grow into a
+            versatile software engineer.
+          </p>
+          <ul className="mt-5 grid sm:grid-cols-2 gap-2 text-base">
+            <li>🎯 5+ personal projects shipped</li>
+            <li>📊 50K+ rows analyzed in Power BI</li>
+            <li>💻 Comfortable with Java, SQL & JS</li>
+            <li>🚀 Always learning something new</li>
+          </ul>
         </Section>
 
         <Section id="skills" title="Skills">
@@ -196,21 +227,41 @@ function PortfolioPage() {
         </Section>
 
         <Section id="education" title="Education">
-          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-            <h3 className="text-xl font-bold">BCA — Bachelor of Computer Applications</h3>
-            <p className="text-muted-foreground mt-1">Your College Name</p>
-            <p className="text-muted-foreground">2024 – 2027</p>
+          <div className="space-y-5">
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
+              <p className="text-muted-foreground mt-1">Sri Krishna Arts and Science College, Coimbatore</p>
+              <p className="text-muted-foreground">2023 – 2026 · CGPA: 8.4 / 10</p>
+              <p className="mt-2 text-sm">Relevant coursework: Java, DBMS, Data Structures, Web Technologies, Software Engineering.</p>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Higher Secondary (12th — Computer Science)</h3>
+              <p className="text-muted-foreground mt-1">Government Higher Secondary School, Tamil Nadu</p>
+              <p className="text-muted-foreground">2022 – 2023 · 88%</p>
+            </div>
           </div>
         </Section>
 
         <Section id="experience" title="Experience">
-          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-            <h3 className="text-xl font-bold">Java Developer Intern</h3>
-            <p className="text-muted-foreground mt-1">XYZ Company · 2026</p>
-            <p className="mt-3">
-              Worked on Java applications, SQL databases, and frontend web pages.
-              Collaborated with the team on production features and bug fixes.
-            </p>
+          <div className="space-y-5">
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Java Developer Intern</h3>
+              <p className="text-muted-foreground mt-1">CodeClause · Remote · Jun 2025 – Aug 2025</p>
+              <ul className="mt-3 list-disc pl-5 space-y-1.5">
+                <li>Built 3 Java mini-projects including a Bank Management System using JDBC and MySQL.</li>
+                <li>Implemented OOP design, exception handling, and modular code reviewed by senior developers.</li>
+                <li>Improved query performance by ~30% by refactoring SQL joins and adding indexes.</li>
+              </ul>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">Data Analyst Trainee</h3>
+              <p className="text-muted-foreground mt-1">YBI Foundation · Remote · Jan 2025 – Mar 2025</p>
+              <ul className="mt-3 list-disc pl-5 space-y-1.5">
+                <li>Analyzed real-world datasets using Python (Pandas) and Power BI.</li>
+                <li>Delivered 4 dashboards covering sales, HR, and customer churn use cases.</li>
+                <li>Presented insights and recommendations to mentors in weekly demo sessions.</li>
+              </ul>
+            </div>
           </div>
         </Section>
 
