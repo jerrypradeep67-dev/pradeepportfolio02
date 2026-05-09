@@ -237,39 +237,35 @@ function PortfolioPage() {
         <Section id="education" title="Education">
           <div className="space-y-5">
             <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
-              <p className="text-muted-foreground mt-1">Sri Krishna Arts and Science College, Coimbatore</p>
-              <p className="text-muted-foreground">2023 – 2026 · CGPA: 8.4 / 10</p>
-              <p className="mt-2 text-sm">Relevant coursework: Java, DBMS, Data Structures, Web Technologies, Software Engineering.</p>
+              <h3 className="text-xl font-bold">B.Tech — Cyber Security</h3>
+              <p className="text-muted-foreground mt-1">Dhanalakshmi Srinivasan Engineering College</p>
+              <p className="text-muted-foreground">2024 – 2027 · CGPA: 7.5</p>
             </div>
             <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Higher Secondary (12th — Computer Science)</h3>
-              <p className="text-muted-foreground mt-1">Government Higher Secondary School, Tamil Nadu</p>
-              <p className="text-muted-foreground">2022 – 2023 · 88%</p>
+              <h3 className="text-xl font-bold">Diploma</h3>
+              <p className="text-muted-foreground mt-1">Dhanalakshmi Srinivasan Polytechnic College</p>
+              <p className="text-muted-foreground">2021 – 2024 · 72%</p>
+            </div>
+            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+              <h3 className="text-xl font-bold">SSLC</h3>
+              <p className="text-muted-foreground mt-1">Sowma Public School</p>
+              <p className="text-muted-foreground">2017 – 2018 · 45%</p>
             </div>
           </div>
         </Section>
 
         <Section id="experience" title="Experience">
-          <div className="space-y-5">
-            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Java Developer Intern</h3>
-              <p className="text-muted-foreground mt-1">CodeClause · Remote · Jun 2025 – Aug 2025</p>
-              <ul className="mt-3 list-disc pl-5 space-y-1.5">
-                <li>Built 3 Java mini-projects including a Bank Management System using JDBC and MySQL.</li>
-                <li>Implemented OOP design, exception handling, and modular code reviewed by senior developers.</li>
-                <li>Improved query performance by ~30% by refactoring SQL joins and adding indexes.</li>
-              </ul>
-            </div>
-            <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
-              <h3 className="text-xl font-bold">Data Analyst Trainee</h3>
-              <p className="text-muted-foreground mt-1">YBI Foundation · Remote · Jan 2025 – Mar 2025</p>
-              <ul className="mt-3 list-disc pl-5 space-y-1.5">
-                <li>Analyzed real-world datasets using Python (Pandas) and Power BI.</li>
-                <li>Delivered 4 dashboards covering sales, HR, and customer churn use cases.</li>
-                <li>Presented insights and recommendations to mentors in weekly demo sessions.</li>
-              </ul>
-            </div>
+          <div className="bg-muted rounded-2xl p-6 border-l-4 border-primary">
+            <h3 className="text-xl font-bold">Open to Internships</h3>
+            <p className="text-muted-foreground mt-1">Cyber Security · Penetration Testing · Python Development</p>
+            <p className="mt-3">
+              Currently pursuing my B.Tech in Cyber Security and actively seeking internship
+              opportunities where I can apply my Python, networking, and security fundamentals
+              on real-world projects. Outside of coursework, I build personal projects (see
+              the <a href="#projects" className="text-primary font-semibold hover:underline">Projects</a> section)
+              to strengthen my hands-on skills in scripting, network reconnaissance, and
+              vulnerability discovery.
+            </p>
           </div>
         </Section>
 
