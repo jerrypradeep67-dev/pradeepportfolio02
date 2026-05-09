@@ -117,7 +117,7 @@ function PortfolioPage() {
     const message = String(data.get("message") || "");
     const subject = encodeURIComponent(`Portfolio contact from ${name}`);
     const body = encodeURIComponent(`${message}\n\nFrom: ${name} <${email}>`);
-    window.location.href = `mailto:pradeepmuniyandi2002@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:jerrypradeep67@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
