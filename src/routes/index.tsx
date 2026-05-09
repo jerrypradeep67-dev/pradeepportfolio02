@@ -4,12 +4,12 @@ import { useEffect, useState, type FormEvent } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pradeep M | Java Developer & Data Analyst Portfolio" },
-      { name: "description", content: "Portfolio of Pradeep M — Java Developer, Data Analyst, and Web Developer. Projects, skills, certificates and contact." },
-      { name: "keywords", content: "Pradeep M, Java Developer, Data Analyst, Portfolio, HTML CSS JavaScript, Power BI" },
+      { title: "Pradeep M | Cyber Security Student & Python Developer" },
+      { name: "description", content: "Portfolio of Pradeep M — B.Tech Cyber Security student passionate about penetration testing, network security, and Python development." },
+      { name: "keywords", content: "Pradeep M, Cyber Security, Penetration Testing, Python Developer, Java, Networking, Portfolio" },
       { name: "author", content: "Pradeep M" },
-      { property: "og:title", content: "Pradeep M | Portfolio" },
-      { property: "og:description", content: "Java Developer & Data Analyst Portfolio" },
+      { property: "og:title", content: "Pradeep M | Cyber Security Portfolio" },
+      { property: "og:description", content: "Cyber Security student & Python developer portfolio" },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -17,10 +17,10 @@ export const Route = createFileRoute("/")({
 });
 
 const ROLES = [
-  "Java Developer",
-  "Data Analyst",
-  "Web Developer",
-  "Problem Solver",
+  "Cyber Security Student",
+  "Python Developer",
+  "Penetration Testing Enthusiast",
+  "Lifelong Learner",
 ];
 
 const NAV = [
@@ -36,41 +36,37 @@ const NAV = [
 ] as const;
 
 const SKILLS = [
-  { name: "Java (Core & OOP)", level: 85 },
-  { name: "SQL & MySQL", level: 80 },
-  { name: "HTML5 & CSS3", level: 90 },
-  { name: "JavaScript", level: 75 },
-  { name: "Power BI & Excel", level: 80 },
-  { name: "Python (Basics)", level: 65 },
-  { name: "Data Structures & Algorithms", level: 70 },
-  { name: "Git & GitHub", level: 75 },
+  { name: "Java", level: 75 },
+  { name: "C++", level: 70 },
+  { name: "Python", level: 80 },
+  { name: "Networking", level: 75 },
+  { name: "Web Development (Basics)", level: 65 },
+  { name: "Leadership", level: 80 },
+];
+
+const INTERESTS = [
+  "Penetration Testing",
+  "Digital Forensics",
+  "Network Security",
+  "Web Application Security",
+  "Web Design",
 ];
 
 const PROJECTS = [
   {
     title: "Student Management System",
-    desc: "Java + JDBC application to manage student records, marks, and attendance with role-based login. Built with OOP principles and MySQL backend; supports CRUD operations and report exports.",
-    tags: ["Java", "JDBC", "MySQL", "OOP"],
+    desc: "Python program to store and manage student records — supports add, update, and delete operations with structured, database-like storage. Demonstrates file handling and SQLite fundamentals.",
+    tags: ["Python", "SQLite", "File Handling", "VS Code"],
   },
   {
-    title: "Sales Insights Dashboard",
-    desc: "End-to-end Power BI dashboard analyzing 50K+ sales records. Performed data cleaning in SQL, built KPI cards, drill-through reports, and revenue trend analysis that surfaced top-performing regions.",
-    tags: ["Power BI", "SQL", "DAX", "Excel"],
+    title: "URL Status Checker",
+    desc: "Python tool that sends HTTP requests to verify whether websites are active and returns their response codes. Useful for monitoring website availability and learning networking concepts.",
+    tags: ["Python", "Requests", "Networking"],
   },
   {
-    title: "Library Management System",
-    desc: "Console-based Java app for issuing, returning, and tracking books with fine calculation. Uses file I/O for persistence and exception handling for robust user input.",
-    tags: ["Java", "File I/O", "OOP"],
-  },
-  {
-    title: "Personal Portfolio Website",
-    desc: "Fully responsive portfolio built with modern HTML, CSS, and JavaScript. Includes dark mode, typing animation, smooth scroll navigation, and mobile-first design.",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "COVID-19 Data Analysis",
-    desc: "Exploratory data analysis on global COVID-19 datasets using Excel and Power BI. Created interactive visuals comparing case growth, recovery, and vaccination trends across countries.",
-    tags: ["Excel", "Power BI", "Data Analysis"],
+    title: "Port Scanner",
+    desc: "Simple Python port scanner that probes a target system for open ports to help identify potential network vulnerabilities. Built using the socket library.",
+    tags: ["Python", "Socket", "Cyber Security"],
   },
 ];
 
