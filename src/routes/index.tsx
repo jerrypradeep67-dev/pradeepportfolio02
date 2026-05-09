@@ -163,11 +163,26 @@ function PortfolioPage() {
 
       <main className="space-y-9 py-9">
         <Section id="about" title="About Me">
-          <p className="text-lg">
-            I am a motivated student and beginner developer interested in Java development,
-            data analysis, and web development. I enjoy solving problems, learning new
-            technologies, and building real-world projects that create impact.
+          <p className="text-lg leading-relaxed">
+            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a BCA student
+            passionate about turning ideas into clean, working software. I specialize in
+            <span className="font-semibold"> Java development</span> and
+            <span className="font-semibold"> data analytics</span>, and I love the moment a messy
+            dataset becomes a clear story or a few lines of code start solving a real problem.
           </p>
+          <p className="text-lg leading-relaxed mt-4">
+            Over the past two years I've built console and database-driven Java applications,
+            designed Power BI dashboards on real-world datasets, and shipped responsive websites
+            using HTML, CSS, and JavaScript. I'm currently sharpening my skills in
+            Data Structures & Algorithms, SQL, and full-stack development to grow into a
+            versatile software engineer.
+          </p>
+          <ul className="mt-5 grid sm:grid-cols-2 gap-2 text-base">
+            <li>🎯 5+ personal projects shipped</li>
+            <li>📊 50K+ rows analyzed in Power BI</li>
+            <li>💻 Comfortable with Java, SQL & JS</li>
+            <li>🚀 Always learning something new</li>
+          </ul>
         </Section>
 
         <Section id="skills" title="Skills">
