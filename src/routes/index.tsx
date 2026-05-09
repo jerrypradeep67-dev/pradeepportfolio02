@@ -36,34 +36,50 @@ const NAV = [
 ] as const;
 
 const SKILLS = [
-  { name: "Java", level: 85 },
-  { name: "HTML & CSS", level: 90 },
+  { name: "Java (Core & OOP)", level: 85 },
+  { name: "SQL & MySQL", level: 80 },
+  { name: "HTML5 & CSS3", level: 90 },
   { name: "JavaScript", level: 75 },
-  { name: "Power BI", level: 70 },
-  { name: "SQL", level: 80 },
+  { name: "Power BI & Excel", level: 80 },
+  { name: "Python (Basics)", level: 65 },
+  { name: "Data Structures & Algorithms", level: 70 },
+  { name: "Git & GitHub", level: 75 },
 ];
 
 const PROJECTS = [
   {
     title: "Student Management System",
-    desc: "Java project for managing student records, marks and attendance with a clean console interface.",
-    tags: ["Java", "OOP", "JDBC"],
+    desc: "Java + JDBC application to manage student records, marks, and attendance with role-based login. Built with OOP principles and MySQL backend; supports CRUD operations and report exports.",
+    tags: ["Java", "JDBC", "MySQL", "OOP"],
   },
   {
-    title: "Sales Data Analysis",
-    desc: "Business insights dashboard built with Excel, SQL and Power BI on real sales data.",
-    tags: ["Power BI", "SQL", "Excel"],
+    title: "Sales Insights Dashboard",
+    desc: "End-to-end Power BI dashboard analyzing 50K+ sales records. Performed data cleaning in SQL, built KPI cards, drill-through reports, and revenue trend analysis that surfaced top-performing regions.",
+    tags: ["Power BI", "SQL", "DAX", "Excel"],
   },
   {
-    title: "Portfolio Website",
-    desc: "Responsive personal portfolio built with modern HTML, CSS and JavaScript.",
-    tags: ["HTML", "CSS", "JS"],
+    title: "Library Management System",
+    desc: "Console-based Java app for issuing, returning, and tracking books with fine calculation. Uses file I/O for persistence and exception handling for robust user input.",
+    tags: ["Java", "File I/O", "OOP"],
+  },
+  {
+    title: "Personal Portfolio Website",
+    desc: "Fully responsive portfolio built with modern HTML, CSS, and JavaScript. Includes dark mode, typing animation, smooth scroll navigation, and mobile-first design.",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "COVID-19 Data Analysis",
+    desc: "Exploratory data analysis on global COVID-19 datasets using Excel and Power BI. Created interactive visuals comparing case growth, recovery, and vaccination trends across countries.",
+    tags: ["Excel", "Power BI", "Data Analysis"],
   },
 ];
 
 const CERTIFICATES = [
-  { title: "Java Programming", issuer: "Completed Java programming training." },
-  { title: "Data Analysis", issuer: "Excel, SQL and Power BI fundamentals." },
+  { title: "Java Programming Masterclass", issuer: "Udemy · 2025" },
+  { title: "SQL for Data Analysis", issuer: "HackerRank · 2025" },
+  { title: "Microsoft Power BI Data Analyst", issuer: "Microsoft Learn · 2025" },
+  { title: "Responsive Web Design", issuer: "freeCodeCamp · 2024" },
+  { title: "Python for Everybody", issuer: "Coursera · 2024" },
 ];
 
 const ACHIEVEMENTS = [
