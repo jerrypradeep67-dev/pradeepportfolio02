@@ -160,25 +160,27 @@ function PortfolioPage() {
       <main className="space-y-9 py-9">
         <Section id="about" title="About Me">
           <p className="text-lg leading-relaxed">
-            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a BCA student
-            passionate about turning ideas into clean, working software. I specialize in
-            <span className="font-semibold"> Java development</span> and
-            <span className="font-semibold"> data analytics</span>, and I love the moment a messy
-            dataset becomes a clear story or a few lines of code start solving a real problem.
+            Hi, I'm <span className="font-semibold text-primary">Pradeep M</span> — a
+            <span className="font-semibold"> B.Tech Cyber Security</span> student based in
+            Trichy, Tamil Nadu. I believe every challenge is an opportunity to grow and every
+            setback is a lesson for improvement.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Over the past two years I've built console and database-driven Java applications,
-            designed Power BI dashboards on real-world datasets, and shipped responsive websites
-            using HTML, CSS, and JavaScript. I'm currently sharpening my skills in
-            Data Structures & Algorithms, SQL, and full-stack development to grow into a
-            versatile software engineer.
+            I'm passionate, resilient, and committed to continuous learning — I enjoy exploring
+            new ideas, pushing boundaries, and building skills that create meaningful impact.
+            My goal is to keep evolving while contributing positively to the world around me,
+            with a focus on penetration testing, network security, and digital forensics.
           </p>
-          <ul className="mt-5 grid sm:grid-cols-2 gap-2 text-base">
-            <li>🎯 5+ personal projects shipped</li>
-            <li>📊 50K+ rows analyzed in Power BI</li>
-            <li>💻 Comfortable with Java, SQL & JS</li>
-            <li>🚀 Always learning something new</li>
-          </ul>
+          <div className="mt-6">
+            <h3 className="font-bold mb-3">Areas of Interest</h3>
+            <div className="flex flex-wrap gap-2">
+              {INTERESTS.map((i) => (
+                <span key={i} className="text-sm font-semibold px-3 py-1.5 rounded-full bg-primary/10 text-primary">
+                  {i}
+                </span>
+              ))}
+            </div>
+          </div>
         </Section>
 
         <Section id="skills" title="Skills">
@@ -197,6 +199,16 @@ function PortfolioPage() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-bold mb-2">Languages</h3>
+              <p className="text-muted-foreground">Tamil · English</p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2">Hobbies</h3>
+              <p className="text-muted-foreground">Watching movies · Mobile gaming · Farming</p>
+            </div>
           </div>
         </Section>
 
