@@ -292,26 +292,9 @@ function PortfolioPage() {
         </Section>
 
         <Section id="resume" title="Resume">
-          <p className="mb-5 text-lg">View or download my professional resume below.</p>
-          <div className="flex flex-wrap gap-3 mb-6">
-            <a href="/Pradeep-M-Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block px-7 py-3 rounded-full bg-primary text-primary-foreground font-bold transition hover:scale-105">
-              View Resume
-            </a>
-            <a href="/Pradeep-M-Resume.pdf" download="Pradeep-M-Resume.pdf" className="inline-block px-7 py-3 rounded-full border-2 border-primary text-primary font-bold transition hover:bg-primary hover:text-primary-foreground">
-              Download Resume
-            </a>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card bg-muted">
-            <object data="/Pradeep-M-Resume.pdf" type="application/pdf" className="w-full h-[80vh]">
-              <p className="p-6">
-                Your browser can't preview PDFs.{" "}
-                <a href="/Pradeep-M-Resume.pdf" className="text-primary font-semibold underline" target="_blank" rel="noopener noreferrer">
-                  Click here to open the resume
-                </a>.
-              </p>
-            </object>
-          </div>
+          <ResumeGate />
         </Section>
+
 
         <Section id="contact" title="Contact Me">
           <div className="grid md:grid-cols-2 gap-8">
@@ -352,5 +335,92 @@ function Section({ id, title, children }: { id: string; title: string; children:
       <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-6">{title}</h2>
       {children}
     </section>
+  );
+}
+
+const RESUME_ACCESS_CODE = "PRADEEP2026";
+
+function ResumeGate() {
+  const [unlocked, setUnlocked] = useState(false);
+  const [code, setCode] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && localStorage.getItem("resume_unlocked") === "1") {
+      setUnlocked(true);
+    }
+  }, []);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (code.trim().toUpperCase() === RESUME_ACCESS_CODE) {
+      setUnlocked(true);
+      setError("");
+      localStorage.setItem("resume_unlocked", "1");
+    } else {
+      setError("Incorrect code. Please try again.");
+    }
+  };
+
+  if (!unlocked) {
+    return (
+      <div className="max-w-md">
+        <p className="mb-5 text-lg">Enter the access code to view or download my resume.</p>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <input
+            type="password"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            placeholder="Enter access code"
+            className="px-4 py-3 rounded-full border-2 border-border bg-background focus:border-primary outline-none"
+            autoComplete="off"
+          />
+          {error && <p className="text-destructive text-sm px-2">{error}</p>}
+          <button
+            type="submit"
+            className="px-7 py-3 rounded-full bg-primary text-primary-foreground font-bold transition hover:scale-105"
+          >
+            Unlock Resume
+          </button>
+          <p className="text-sm text-muted-foreground px-2">
+            Don't have a code? Request one via the Contact section below.
+          </p>
+        </form>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <p className="mb-5 text-lg">View or download my professional resume below.</p>
+      <div className="flex flex-wrap gap-3 mb-6">
+        <a href="/Pradeep-M-Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block px-7 py-3 rounded-full bg-primary text-primary-foreground font-bold transition hover:scale-105">
+          View Resume
+        </a>
+        <a href="/Pradeep-M-Resume.pdf" download="Pradeep-M-Resume.pdf" className="inline-block px-7 py-3 rounded-full border-2 border-primary text-primary font-bold transition hover:bg-primary hover:text-primary-foreground">
+          Download Resume
+        </a>
+        <button
+          onClick={() => {
+            localStorage.removeItem("resume_unlocked");
+            setUnlocked(false);
+            setCode("");
+          }}
+          className="inline-block px-7 py-3 rounded-full border-2 border-border text-foreground font-bold transition hover:bg-muted"
+        >
+          Lock
+        </button>
+      </div>
+      <div className="rounded-2xl overflow-hidden border border-border shadow-card bg-muted">
+        <object data="/Pradeep-M-Resume.pdf" type="application/pdf" className="w-full h-[80vh]">
+          <p className="p-6">
+            Your browser can't preview PDFs.{" "}
+            <a href="/Pradeep-M-Resume.pdf" className="text-primary font-semibold underline" target="_blank" rel="noopener noreferrer">
+              Click here to open the resume
+            </a>.
+          </p>
+        </object>
+      </div>
+    </>
   );
 }
